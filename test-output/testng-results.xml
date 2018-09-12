@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="79269" started-at="2018-09-07T12:55:06Z" finished-at="2018-09-07T12:56:25Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="79269" started-at="2018-09-07T12:55:06Z" finished-at="2018-09-07T12:56:25Z">
+      <class name="testcases.TC_Login">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:testcases.TC_Login@f6c48ac]" name="setup" is-config="true" duration-ms="21506" started-at="2018-09-07T18:25:06Z" finished-at="2018-09-07T18:25:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[dev]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="config(java.lang.reflect.Method)[pri:0, instance:testcases.TC_Login@f6c48ac]" name="config" is-config="true" duration-ms="6" started-at="2018-09-07T18:25:27Z" finished-at="2018-09-07T18:25:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.TC_Login.testLogin_ValidCredentials() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method status="PASS" signature="testLogin_ValidCredentials()[pri:0, instance:testcases.TC_Login@f6c48ac]" name="testLogin_ValidCredentials" duration-ms="54068" started-at="2018-09-07T18:25:27Z" finished-at="2018-09-07T18:26:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin_ValidCredentials -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testcases.TC_Login@f6c48ac]" name="tearDown" is-config="true" duration-ms="4" started-at="2018-09-07T18:26:21Z" finished-at="2018-09-07T18:26:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin_ValidCredentials status=SUCCESS method=TC_Login.testLogin_ValidCredentials()[pri:0, instance:testcases.TC_Login@f6c48ac] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown(java.lang.String)[pri:0, instance:testcases.TC_Login@f6c48ac]" name="tearDown" is-config="true" duration-ms="3665" started-at="2018-09-07T18:26:21Z" finished-at="2018-09-07T18:26:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testcases.TC_Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
