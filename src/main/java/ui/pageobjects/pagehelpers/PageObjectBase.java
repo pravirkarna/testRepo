@@ -6,8 +6,8 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
@@ -21,7 +21,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import ui.pageobject.HomeTab;
+import ui.pageobject.HomePage;
 
 
 public class PageObjectBase {
@@ -35,7 +35,7 @@ public class PageObjectBase {
 	public static ExtentReports extent;
 	public static ExtentTest test ;
 	
-	public static HomeTab homePage ;
+	public static HomePage homePage ;
 	
 	public static FunctionalLibrary helper;
 	

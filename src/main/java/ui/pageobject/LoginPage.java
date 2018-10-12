@@ -3,8 +3,6 @@ package ui.pageobject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Parameters;
-
 import com.relevantcodes.extentreports.LogStatus;
 
 import ui.pageobjects.pagehelpers.FunctionalLibrary;
@@ -12,53 +10,56 @@ import ui.pageobjects.pagehelpers.PageObjectBase;
 
 public class LoginPage extends PageObjectBase{
 		
-	@FindBy(xpath = "//input[@name='username']")
-	public static WebElement Username_TextBox;
+	@FindBy(xpath = "//li/a[contains(text(),'LOGIN')]")
+	public static WebElement LOGIN_Button;
 	
-	@FindBy(xpath = "//input[@name='password']")
-	public static WebElement Password_TextBox;
+	@FindBy(xpath = ".//select[@id='Authentication']")
+	public static WebElement DropDown;
 	
-	@FindBy(xpath = "//button[text()='Sign In']")
-	public static WebElement LoginButton;
+	@FindBy(xpath = ".//input[@id='phoneNum']")
+	public static WebElement MobileNumber;
 	
-	@FindBy(xpath = "//div[@title='Home']")
-	public static WebElement HomeTab;
+	@FindBy(xpath = ".//input[@id='phoneOTP']")
+	public static WebElement Password;
 	
-	@FindBy(xpath = "//*[@id='tablist']/li[1]/a")
-	public static WebElement DocumentTab;
-	
-	@FindBy(xpath = "//html/body//font")
-	public static WebElement err_Msg;
-	
+	@FindBy(xpath = ".//button[@id='sub_1']")
+	public static WebElement Login;
 
-	
-	
+	@FindBy(xpath = "//*[@id='RULE_KEY']//div[5]/span/i/img")
+	public static WebElement power;
 	
 	public LoginPage() {
 
 		PageFactory.initElements(driver, this);
 		
       }
-	
+
+	public void clickonLOGIN_Button()throws Exception{
+		helper.highlighter(driver,LOGIN_Button);
+		helper.Click(driver, test,LOGIN_Button,"LOGIN BUTTON");
+		helper.wait(driver,DropDown,30);
+	}
 	
 	public void setLoginCredentials() throws Exception {
 		
-		//String credentials[]= helper.getCredentials();
+
+		helper.highlighter(driver, DropDown);
+		helper.selectfromDropDown(driver,test,DropDown,"Login with Mobile Number","Drop Down value");
+		helper.wait(driver,MobileNumber,30);
+
+		helper.highlighter(driver, MobileNumber);
+		helper.EditBox(Password, reader.getCellData("Credentials","MobileNumber", 2), test, "Password");
+
+
+		helper.highlighter(driver, Password);
+		helper.EditBox(Password, reader.getCellData("Credentials","Password", 2), test, "Password");
 		
-		helper.highlighter(driver, Username_TextBox);
-		//Username_TextBox.sendKeys(credentials[1]);
-		helper.EditBox(Username_TextBox, reader.getCellData("Credentials","Username", 2), test, "Username");
-		
-		helper.highlighter(driver, Password_TextBox);
-		//Password_TextBox.sendKeys(credentials[1]);
-		helper.EditBox(Password_TextBox, reader.getCellData("Credentials","Password", 2), test, "Password");
-		
-		helper.highlighter(driver, LoginButton);
-		helper.Click(driver, test, LoginButton, "Login Button");
+		helper.highlighter(driver, Login);
+		helper.Click(driver, test, Login, "Login Button");
 		
 		
-		helper.wait(driver, HomeTab, 20);
-		if((helper.Verify_VisibleEnabled_Element(LoginPage.HomeTab))){
+		helper.wait(driver, power, 20);
+		if((helper.Verify_VisibleEnabled_Element(power))){
 			
 			test.log(LogStatus.PASS, "Verify valid Credential"  ,FunctionalLibrary.ExpectedResults +" Credential should be valid" + FunctionalLibrary.ActualResults+ "Credential is  valid ");
 	
@@ -70,9 +71,9 @@ public class LoginPage extends PageObjectBase{
 	}
 			
 
-	public HomeTab HomeTab() throws InterruptedException {
-		helper.highlighter(driver, HomeTab);
-		return new HomeTab();
+	public HomePage Homepage() throws InterruptedException {
+		helper.highlighter(driver,power);
+		return new HomePage();
 	}
 
 	
