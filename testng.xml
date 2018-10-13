@@ -6,8 +6,10 @@
   <parameter name="environment" value="dev" />
   
     <classes>
-        <class name="testcases.EmployeeMaster"/>
-      
+       <!-- <class name="testcases.TestEmployeeMaster"/>
+      <class name="testcases.TestRole"/>-->
+      <class name="testcases.TestActivity"/>
+
     </classes>
     </test>
 </suite> <!-- Suite -->
