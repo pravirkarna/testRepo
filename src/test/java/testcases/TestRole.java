@@ -1,14 +1,13 @@
 package testcases;
 
-import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
-
+import org.testng.annotations.Test;
 import ui.pageobject.LoginPage;
 import ui.pageobjects.pagehelpers.PageObjectBase;
 
-public class EmployeeMaster extends PageObjectBase{
-	@Test
-	public void testLogin_EmployeeMaster() throws Exception {
+public class TestRole extends PageObjectBase {
+    @Test
+    public void testLogin_EmployeeMaster() throws Exception {
 
         loginPage = new LoginPage();
         loginPage.clickonLOGIN_Button();
@@ -18,18 +17,7 @@ public class EmployeeMaster extends PageObjectBase{
         homePage = loginPage.Homepage();
         homePage.clickOnCentralAdmin();
 
-        employesMaster = homePage.employesMaster();
-        employesMaster.EnterDataOnCreateEmployes();
-
+        role = homePage.Role();
+        role.EnterDataOnRole();
     }
-
-        @Test
-        public void testRole() throws Exception{
-
-
-
-        }
-
-
-
 }

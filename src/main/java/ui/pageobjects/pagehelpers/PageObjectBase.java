@@ -22,9 +22,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import ui.pageobject.EmployesMaster;
-import ui.pageobject.HomePage;
-import ui.pageobject.LoginPage;
+import ui.pageobject.*;
 
 
 public class PageObjectBase {
@@ -41,6 +39,8 @@ public class PageObjectBase {
 	public static LoginPage loginPage;
 	public static HomePage homePage ;
 	public static EmployesMaster employesMaster;
+	public static Role role;
+	public static Activity activity;
 	
 	public static FunctionalLibrary helper;
 	
@@ -146,18 +146,6 @@ public class PageObjectBase {
 			test.log(LogStatus.INFO, "End of Report ");
 			extent.close();
 		}
-	
-	
-	/*	@AfterClass
-		public static void teardown()  {
-	
-		closeBrowser();
-	
-		extent.flush();
-		test.log(LogStatus.INFO, "End of Report ");
-		extent.close();
-	
-		}*/
-		
+
 	
 }

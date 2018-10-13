@@ -8,9 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import ui.pageobjects.pagehelpers.PageObjectBase;
 
 public class EmployesMaster extends PageObjectBase {
-/*
-    @FindBy(xpath = "//div/ul/li/a/span/span[contains(text(),'Employee Master')]")
-    public WebElement EmployeeMaster;*/
+
 
     @FindBy(xpath = "//span/a[contains(text(),'Create Employee')]")
     public static WebElement CreateEmployee;
@@ -43,14 +41,7 @@ public class EmployesMaster extends PageObjectBase {
     @FindBy(xpath = "//button[contains(text(),'Close')]")
     public static WebElement Close ;
 
-    @FindBy(xpath = "//span[text()='Role']")
-    public static WebElement Role ;
 
-    @FindBy(xpath = ".//*[@id='organization_name']")
-    public static WebElement DepartmentName ;
-
-    @FindBy(xpath = ".//div[@id='gridLayoutWrapper']")
-    public static WebElement dropDown;
 
 
 
@@ -73,8 +64,8 @@ public class EmployesMaster extends PageObjectBase {
         System.out.println("size:"+size);
         driver.switchTo().frame(1);
 
-        helper.highlighter(driver,employesMaster.CreateEmployee);
-        helper.Click(driver,test,employesMaster.CreateEmployee,"Create Employee");
+        helper.highlighter(driver,CreateEmployee);
+        helper.Click(driver,test,CreateEmployee,"Create Employee");
         helper.pause(6);
 
         helper.highlighter(driver,AdharNumber);
@@ -82,24 +73,24 @@ public class EmployesMaster extends PageObjectBase {
         helper.pause(1);
 
         helper.highlighter(driver,EmployeeName);
-        helper.EditBox(EmployeeName,reader.getCellData("EmployeeMaster","EmployeeName",2),test,"Adhar Number");
+        helper.EditBox(EmployeeName,reader.getCellData("EmployeeMaster","EmployeeName",2),test,"EmployeeName");
         helper.pause(1);
 
         helper.highlighter(driver,EmployeeCode);
-        helper.EditBox(EmployeeCode,reader.getCellData("EmployeeMaster","EmployeeCode",2),test,"Adhar Number");
+        helper.EditBox(EmployeeCode,reader.getCellData("EmployeeMaster","EmployeeCode",2),test,"EmployeeCode");
         helper.pause(1);
 
         helper.highlighter(driver,EmployeeID);
-        helper.EditBox(EmployeeID,reader.getCellData("EmployeeMaster","EmployeeID",2),test,"Adhar Number");
+        helper.EditBox(EmployeeID,reader.getCellData("EmployeeMaster","EmployeeID",2),test,"EmployeeID");
         helper.pause(1);
 
         helper.highlighter(driver,OrganisationName);
-        helper.EditBox(OrganisationName,reader.getCellData("EmployeeMaster","OrganisationName",2),test,"Adhar Number");
+        helper.EditBox(OrganisationName,reader.getCellData("EmployeeMaster","OrganisationName",2),test,"OrganisationName");
         helper.pause(1);
 
         helper.highlighter(driver,DesignationName);
-        helper.EditBox(DesignationName,reader.getCellData("EmployeeMaster","DesignationName",2),test,"Adhar Number");
-        helper.pause(1);
+        helper.EditBox(DesignationName,reader.getCellData("EmployeeMaster","DesignationName",2),test,"DesignationName");
+        helper.pause(5);
 
         helper.highlighter(driver,Create);
         helper.Click(driver,test,Create,"Click on create");
@@ -110,21 +101,5 @@ public class EmployesMaster extends PageObjectBase {
 
     }
 
-    public void EnterDataOnRole() throws Exception {
 
-        helper.highlighter(driver,Role);
-        helper.Click(driver,test,Role,"Click on Role ");
-        helper.pause(6);
-        int size = driver.findElements(By.tagName("iframe")).size();
-        System.out.println("size:"+size);
-        driver.switchTo().frame(1);
-
-        helper.highlighter(driver,DepartmentName);
-        helper.Click(driver,test,DepartmentName,"Enter Department Name");
-        helper.pause(6);
-
-
-
-
-    }
 }

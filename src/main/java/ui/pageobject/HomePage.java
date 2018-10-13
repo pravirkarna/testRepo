@@ -21,7 +21,12 @@ public class HomePage extends PageObjectBase {
 	
 	@FindBy(xpath = "//span[text()='Employee Master']")
 	public WebElement EmployeeMaster;
-	
+
+	@FindBy(xpath = "//span[text()='Role']")
+	public WebElement Role;
+
+	@FindBy(xpath = "//span[text()='Activity']")
+	public WebElement Activity;
 
 
 	
@@ -59,4 +64,14 @@ public class HomePage extends PageObjectBase {
 		return new EmployesMaster();
 	}
 
+	public Role Role() throws InterruptedException {
+
+		return new Role();
+	}
+
+	public Activity Activity() throws InterruptedException {
+
+		return new Activity();
+	}
 }
+
