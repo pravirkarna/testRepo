@@ -48,7 +48,7 @@ public class LoginPage extends PageObjectBase{
 		helper.wait(driver,MobileNumber,30);
 
 		helper.highlighter(driver, MobileNumber);
-		helper.EditBox(Password, reader.getCellData("Credentials","MobileNumber", 2), test, "Password");
+		helper.EditBox(MobileNumber, reader.getCellData("Credentials","MobileNumber", 2), test, "Mobile Number");
 
 
 		helper.highlighter(driver, Password);
@@ -72,7 +72,7 @@ public class LoginPage extends PageObjectBase{
 			
 
 	public HomePage Homepage() throws InterruptedException {
-		helper.highlighter(driver,power);
+
 		return new HomePage();
 	}
 

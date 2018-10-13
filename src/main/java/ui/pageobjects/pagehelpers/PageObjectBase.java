@@ -5,8 +5,9 @@ import java.lang.reflect.Method;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
+
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
@@ -21,7 +22,9 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import ui.pageobject.EmployesMaster;
 import ui.pageobject.HomePage;
+import ui.pageobject.LoginPage;
 
 
 public class PageObjectBase {
@@ -34,8 +37,10 @@ public class PageObjectBase {
 	
 	public static ExtentReports extent;
 	public static ExtentTest test ;
-	
+
+	public static LoginPage loginPage;
 	public static HomePage homePage ;
+	public static EmployesMaster employesMaster;
 	
 	public static FunctionalLibrary helper;
 	
@@ -70,9 +75,11 @@ public class PageObjectBase {
 		if(browser.equalsIgnoreCase("Firefox")){
 			capabilities = DesiredCapabilities.firefox();
 			capabilities.setCapability("marionette", true);
-			System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver");
 			setDriver(new FirefoxDriver(capabilities));
-			System.out.println("-----Firefox Browser Launched----- ");		    	
+			System.out.println("-----Firefox Browser Launched----- ");
+
+
 		}
 		
 		else if(browser.equalsIgnoreCase("Chrome")){
