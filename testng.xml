@@ -6,7 +6,7 @@
   <parameter name="environment" value="dev" />
   
     <classes>
-        <class name="testcases.TC_01_Login"/>
+        <class name="testcases.EmployeeMaster"/>
       
     </classes>
     </test>
