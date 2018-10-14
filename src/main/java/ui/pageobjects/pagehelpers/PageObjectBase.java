@@ -41,7 +41,8 @@ public class PageObjectBase {
 	public static EmployesMaster employesMaster;
 	public static Role role;
 	public static Activity activity;
-	
+	public static EmployeeRoleMapping employeeRoleMapping ;
+
 	public static FunctionalLibrary helper;
 	
 	public  Method method;

@@ -28,6 +28,11 @@ public class HomePage extends PageObjectBase {
 	@FindBy(xpath = "//span[text()='Activity']")
 	public WebElement Activity;
 
+	@FindBy(xpath = "//span[text()='Employee Role Mapping']")
+	public WebElement EmployeeRoleMapping;
+
+
+
 
 	
 	
@@ -72,6 +77,11 @@ public class HomePage extends PageObjectBase {
 	public Activity Activity() throws InterruptedException {
 
 		return new Activity();
+	}
+
+	public EmployeeRoleMapping employeeRoleMapping() throws InterruptedException {
+
+		return new EmployeeRoleMapping();
 	}
 }
 
