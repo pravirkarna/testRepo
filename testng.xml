@@ -7,8 +7,10 @@
   
     <classes>
        <!-- <class name="testcases.TestEmployeeMaster"/>
-      <class name="testcases.TestRole"/>-->
-      <class name="testcases.TestActivity"/>
+      <class name="testcases.TestRole"/>
+      <class name="testcases.TestActivity"/>-->
+      <class name="testcases.TestEmployeeRoleMapping"/>
+
 
     </classes>
     </test>
