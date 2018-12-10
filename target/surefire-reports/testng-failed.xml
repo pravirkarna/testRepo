@@ -7,12 +7,12 @@
     <parameter name="environment" value="dev"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="testcases.TC_01_Login">
+      <class name="testcases.TestEmployeeRoleMapping">
         <methods>
-          <include name="testLogin_ValidCredentials"/>
           <include name="setup"/>
+          <include name="testEmployeeRoleMapping"/>
         </methods>
-      </class> <!-- testcases.TC_01_Login -->
+      </class> <!-- testcases.TestEmployeeRoleMapping -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

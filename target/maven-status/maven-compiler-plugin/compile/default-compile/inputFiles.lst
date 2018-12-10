@@ -1,7 +1,10 @@
-/Users/mac/TestNG/src/main/java/ui/pageobjects/pagehelpers/FunctionalLibrary.java
-/Users/mac/TestNG/src/main/java/ui/pageobjects/pagehelpers/XlsReader.java
-/Users/mac/TestNG/src/main/java/ui/pageobject/LoginPage.java
-/Users/mac/TestNG/src/main/java/ui/pageobjects/pagehelpers/PageObjectBase.java
-/Users/mac/TestNG/src/main/java/ui/pageobject/EmployesMaster.java
-/Users/mac/TestNG/src/main/java/ui/pageobjects/pagehelpers/ExcelUtility.java
-/Users/mac/TestNG/src/main/java/ui/pageobject/HomePage.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobject\Role.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobject\HomePage.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobject\EmployeeRoleMapping.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobjects\pagehelpers\FunctionalLibrary.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobject\Activity.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobjects\pagehelpers\XlsReader.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobject\LoginPage.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobjects\pagehelpers\ExcelUtility.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobject\EmployesMaster.java
+C:\Users\pravir.karna\git\framework\src\main\java\ui\pageobjects\pagehelpers\PageObjectBase.java

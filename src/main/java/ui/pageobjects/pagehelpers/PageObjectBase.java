@@ -76,7 +76,7 @@ public class PageObjectBase {
 		if(browser.equalsIgnoreCase("Firefox")){
 			capabilities = DesiredCapabilities.firefox();
 			capabilities.setCapability("marionette", true);
-			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver");
+			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
 			setDriver(new FirefoxDriver(capabilities));
 			System.out.println("-----Firefox Browser Launched----- ");
 

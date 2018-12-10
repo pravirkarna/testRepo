@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="environment" value="dev"/>
-  <parameter name="browser" value="firefox"/>
-  <test name="Test(failed)">
+  <test thread-count="5" name="Test(failed)">
     <parameter name="environment" value="dev"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="testcases.TC_Login">
+      <class name="testcases.TestEmployeeRoleMapping">
         <methods>
           <include name="config"/>
-          <include name="testLogin_ValidCredentials"/>
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="testEmployeeRoleMapping"/>
         </methods>
-      </class> <!-- testcases.TC_Login -->
+      </class> <!-- testcases.TestEmployeeRoleMapping -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
